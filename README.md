@@ -35,21 +35,45 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **TypeScript** - Type safety and better developer experience
 - **React 19** - Latest React features and improved performance
 - **Tailwind CSS** - Utility-first CSS for rapid UI development
+- **Framer Motion** - Physics-based animation library for natural, fluid UI transitions
+
+**Backend & Data:**
+- **Firebase Firestore** - NoSQL cloud database for storing contact form submissions
+- **Next.js API Routes** - Serverless backend functions for email processing
+- **Resend** - Transactional email service for reliable email delivery
 
 **Why this stack:**
 - Next.js provides excellent performance with automatic code splitting and optimized builds
 - TypeScript catches errors early and improves code maintainability
 - App Router enables modern React patterns with Server Components
 - Tailwind speeds up development while maintaining consistent design
-- Firebase for much easier way to saving data
+- Firebase offers real-time data sync and easy scalability
+- Framer Motion enables AI-like, physics-based animations with minimal code
+- Resend provides developer-friendly email API with high deliverability
+
 ## Animation Approach
 
-Animations are kept smooth by:
-- Using CSS transforms and opacity for GPU-accelerated animations
-- Leveraging `will-change` property for elements that will animate
+Animations are kept smooth and natural using advanced techniques:
+
+**Core Principles:**
+- Physics-based animations with spring dynamics for realistic movement
+- GPU-accelerated transforms and opacity changes for 60fps performance
+- Strategic use of `will-change` property for animated elements
+- Layered animations with independent timing for organic behavior
+
+**Implementation Details:**
+- **Framer Motion** for declarative, physics-driven animations
+- Custom spring configurations (`stiffness: 50, damping: 20, mass: 1`) for weight simulation
+- Bezier easing curves for smooth, non-linear motion paths
+- Micro-interactions like breathing effects and anticipation movements
+- AnimatePresence for mount/unmount transitions
+- Idle state randomization for lifelike resting animations
+
+**Performance Optimizations:**
 - Avoiding layout thrashing by batching DOM reads and writes
-- Using Framer Motion or CSS transitions for 60fps animations
 - Optimizing re-renders with React.memo and useMemo where appropriate
+- Conditional `will-change` application (only during active animations)
+- Transform-only animations to leverage GPU compositing
 
 ## Backend & Secrets Management
 
@@ -57,13 +81,15 @@ Animations are kept smooth by:
 - Next.js API Routes for serverless backend functions
 - Server Components for data fetching directly in components
 - Server Actions for form submissions and mutations
+- Firebase Admin SDK for secure server-side database operations
 
 **Secrets Handling:**
-- Environment variables stored in `.env.local` (never committed)
-- Production secrets managed through Vercel Environment Variables
-- API keys accessed only in Server Components or API Routes
-- Client-side code never exposes sensitive credentials
+- Environment variables stored in `.env` for local development (never committed)
+- Production secrets automatically managed through Vercel Environment Variables
+- API keys accessed only in Server Components or API Routes (never exposed to client)
+- Firebase service account credentials stored securely on server-side only
 - `.gitignore` configured to exclude all environment files
+- Vercel automatically injects environment variables during build and runtime
 
 ## Learn More
 
