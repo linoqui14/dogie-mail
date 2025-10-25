@@ -13,17 +13,20 @@ Then install dependencies:
 
 npm install
 
-Create a `.env.local` file in the root directory and add your environment variables:
+Create a `.env` file in the root directory and add your environment variables:
 
-NEXT_PUBLIC_API_KEY=your_api_key_here
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
 
 Finally, run the development server:
 
 npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 ## Tech Stack
 
@@ -38,7 +41,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 - TypeScript catches errors early and improves code maintainability
 - App Router enables modern React patterns with Server Components
 - Tailwind speeds up development while maintaining consistent design
-
+- Firebase for much easier way to saving data
 ## Animation Approach
 
 Animations are kept smooth by:
