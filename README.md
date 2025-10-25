@@ -6,22 +6,22 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, clone the repository:
 
-git clone <your-repository-url>
-cd <your-project-name>
+git clone https://github.com/linoqui14/dogie-mail.git
+cd dogie-mail
 
 Then install dependencies:
 
 npm install
 
 Create a `.env` file in the root directory and add your environment variables:
-
-NEXT_PUBLIC_FIREBASE_API_KEY=
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
-NEXT_PUBLIC_FIREBASE_APP_ID=
-
+```.env
+NEXT_PUBLIC_FIREBASE_API_KEY
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+NEXT_PUBLIC_FIREBASE_PROJECT_ID
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+NEXT_PUBLIC_FIREBASE_APP_ID
+```
 Finally, run the development server:
 
 npm run dev
@@ -47,7 +47,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 Animations are kept smooth by:
 - Using CSS transforms and opacity for GPU-accelerated animations
 - Leveraging `will-change` property for elements that will animate
-- Implementing `requestAnimationFrame` for JavaScript-driven animations
 - Avoiding layout thrashing by batching DOM reads and writes
 - Using Framer Motion or CSS transitions for 60fps animations
 - Optimizing re-renders with React.memo and useMemo where appropriate
